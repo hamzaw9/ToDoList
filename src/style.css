@@ -3,3 +3,61 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+button {
+  cursor: pointer;
+}
+
+.to-do-container {
+  width: 35%;
+  margin: 0 auto;
+  padding: 17px;
+  color: #777272;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.to-do-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-container-inner {
+  margin-bottom: 18px;
+}
+
+.list-container-inner span {
+  padding-left: 15px;
+}
+
+.fa-ellipsis-vertical {
+  float: right;
+}
+
+.add-btn {
+  font-style: italic;
+  padding: 7px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clear-btn {
+  color: #777272;
+  font-size: 14px;
+  border: none;
+}
+
+.clear-btn:hover {
+  color: black;
+  text-decoration: underline;
+}
