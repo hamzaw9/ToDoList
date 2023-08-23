@@ -18,7 +18,7 @@ button {
 .to-do-inner {
   display: flex;
   flex-direction: column;
-  padding: 17px 17px 0 17px;
+  /*padding: 17px 17px 0 17px;*/
   gap: 20px;
 }
 
@@ -29,7 +29,14 @@ button {
 }
 
 .list-container-inner {
+  padding: 0 17px;
   margin-bottom: 18px;
+  border-bottom: 1px solid #dfd6d6;
+}
+
+.list-container-inner:last-child {
+  margin: 0;
+  border: none;
 }
 
 .list-container-inner span {
@@ -43,6 +50,8 @@ button {
 .add-btn {
   font-style: italic;
   padding: 7px;
+  border: none;
+  border-bottom: 1px solid #dfd6d6;
 }
 
 .clear-btn {
