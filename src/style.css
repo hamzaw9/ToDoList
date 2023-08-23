@@ -18,24 +18,27 @@ button {
 .to-do-inner {
   display: flex;
   flex-direction: column;
-  /*padding: 17px 17px 0 17px;*/
-  gap: 20px;
+  gap: 16px;
 }
 
 .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.list-container-inner {
-  padding: 0 17px;
-  margin-bottom: 18px;
+  padding: 17px 17px 3px 17px;
   border-bottom: 1px solid #dfd6d6;
 }
 
+.list-container-inner {
+  padding: 17px;
+  border-bottom: 1px solid #dfd6d6;
+}
+
+.list-container-inner:first-child {
+  padding-top: 0;
+}
+
 .list-container-inner:last-child {
-  margin: 0;
   border: none;
 }
 
@@ -49,7 +52,7 @@ button {
 
 .add-btn {
   font-style: italic;
-  padding: 7px;
+  padding: 7px 17px;
   border: none;
   border-bottom: 1px solid #dfd6d6;
 }
