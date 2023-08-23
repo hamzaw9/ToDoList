@@ -8,4 +8,5 @@ const addTaskToList = () => {
     index: tasks.length + 1,
   };
   tasks.push(newTask);
+  updateLocalStorage();
 };
