@@ -25,7 +25,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 17px 3px 17px;
+  padding: 17px 17px 3px;
   border-bottom: 1px solid #dfd6d6;
 }
 
