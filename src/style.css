@@ -77,7 +77,7 @@ input:focus {
   padding: 7px 0;
 }
 
-.clear-btn {
+.clear-task-btn {
   padding: 15px;
   width: 100%;
   color: #777272;
@@ -85,7 +85,7 @@ input:focus {
   border: none;
 }
 
-.clear-btn:hover {
+.clear-task-btn:hover {
   color: black;
   text-decoration: underline;
 }

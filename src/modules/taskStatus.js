@@ -1,4 +1,5 @@
 import tasks from "./taskObject.js";
+import { renderTasks } from "./renderEditTask.js";
 
 const listContainer = document.getElementById("list-container");
 
@@ -12,12 +13,24 @@ const taskStatusUpdate = (id, checked) => {
   localStorage.setItem("Tasks", JSON.stringify(tasks));
 };
 
-const handleCheckBox = () => {
+export const handletaskStatus = () => {
   listContainer.addEventListener("change", (event) => {
-    if (event.target.classList.contains("check-box")) {
-      taskStatusUpdate(event.target.parentNode.id, event.target.checked);
+    let target = event.target;
+    if (target.classList.contains("check-box")) {
+      taskStatusUpdate(target.parentNode.id, target.checked);
     }
   });
 };
 
-export default handleCheckBox;
+const taskDefaultStatus = () => {
+  tasks.forEach((task) => {
+    task.completed = false;
+  });
+  localStorage.setItem("Tasks", JSON.stringify(tasks));
+};
+
+export const handleTaskDefaultStatus = () => {
+  window.addEventListener("load", () => {
+    taskDefaultStatus();
+  });
+};

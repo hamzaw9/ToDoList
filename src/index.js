@@ -1,7 +1,10 @@
 import "./style.css";
 import { handleRemoveTask, handleAddTask } from "./modules/addRemoveTask.js";
 import { handleEditTask, handleWindowLoad } from "./modules/renderEditTask.js";
-import handleCheckBox from "./modules/taskStatus.js";
+import {
+  handletaskStatus,
+  handleTaskDefaultStatus,
+} from "./modules/taskStatus.js";
 
 handleRemoveTask();
 handleAddTask();
@@ -9,4 +12,5 @@ handleAddTask();
 handleEditTask();
 handleWindowLoad();
 
-handleCheckBox();
+handletaskStatus();
+handleTaskDefaultStatus();
