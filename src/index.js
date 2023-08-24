@@ -1,9 +1,12 @@
-import './style.css';
-import { handleRemoveTask, handleAddTask } from './modules/addRemoveTask.js';
-import { handleEditTask, handleWindowLoad } from './modules/renderEditTask.js';
+import "./style.css";
+import { handleRemoveTask, handleAddTask } from "./modules/addRemoveTask.js";
+import { handleEditTask, handleWindowLoad } from "./modules/renderEditTask.js";
+import handleCheckBox from "./modules/taskStatus.js";
 
 handleRemoveTask();
 handleAddTask();
 
 handleEditTask();
 handleWindowLoad();
+
+handleCheckBox();
