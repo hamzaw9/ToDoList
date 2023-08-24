@@ -46,15 +46,35 @@ button {
   padding-left: 15px;
 }
 
-.fa-ellipsis-vertical {
+.remove-task-btn {
   float: right;
 }
 
-.add-btn {
-  font-style: italic;
+.add-task-container {
+  display: flex;
+  align-items: center;
   padding: 7px 17px;
+}
+
+input {
+  flex: 1;
+  font-style: italic;
   border: none;
   border-bottom: 1px solid #dfd6d6;
+  padding: 7px 0;
+}
+
+input:focus {
+  outline: none;
+  border-color: #dfd6d6;
+}
+
+.add-task-btn {
+  border: none;
+  font-size: 18px;
+  border-bottom: 1px solid #dfd6d6;
+  background-color: white;
+  padding: 7px 0;
 }
 
 .clear-btn {
