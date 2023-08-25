@@ -5,6 +5,7 @@ import {
   handletaskStatus,
   handleTaskDefaultStatus,
 } from "./modules/taskStatus.js";
+import { handleClearTask } from "./modules/clearTasks.js";
 
 handleRemoveTask();
 handleAddTask();
@@ -14,3 +15,5 @@ handleWindowLoad();
 
 handletaskStatus();
 handleTaskDefaultStatus();
+
+handleClearTask();

@@ -1,5 +1,4 @@
 import tasks from "./taskObject.js";
-import { renderTasks } from "./renderEditTask.js";
 
 const listContainer = document.getElementById("list-container");
 

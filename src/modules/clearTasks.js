@@ -1,14 +1,23 @@
-/*import { renderTasks } from "./renderEditTask.js";
+import { renderTasks } from "./renderEditTask.js";
+import { updateIndex } from "./addRemoveTask.js";
+
 import tasks from "./taskObject.js";
 
 const clearCompleteTasks = () => {
-  const updatedTasks = [];
-  tasks.filter((task) => {
-    if (task.completed == false) {
-      updatedTasks.push(task);
+  const completedTaskIndices = [];
+
+  tasks.forEach((task, index) => {
+    if (task.completed === true) {
+      completedTaskIndices.push(index);
     }
   });
-  localStorage.setItem("Tasks", JSON.stringify(updatedTasks));
+
+  for (let i = completedTaskIndices.length - 1; i >= 0; i--) {
+    tasks.splice(completedTaskIndices[i], 1);
+  }
+
+  updateIndex();
+  localStorage.setItem("Tasks", JSON.stringify(tasks));
   renderTasks();
 };
 
@@ -17,4 +26,4 @@ export const handleClearTask = () => {
   clearTaskBtn.addEventListener("click", () => {
     clearCompleteTasks();
   });
-};*/
+};
