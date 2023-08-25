@@ -6,7 +6,7 @@ export const renderTasks = () => {
   listContainer.innerHTML = '';
   tasks.forEach((task, index) => {
     listContainer.innerHTML += ` <div id="${index}" class="list-container-inner">
-      <input type="checkbox">
+      <input class="check-box" type="checkbox">
       <span class="task-description">${task.description}</span>
       <i class="fa-solid fa-trash remove-task-btn"></i>
     </div>`;

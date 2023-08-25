@@ -16,7 +16,7 @@ const addTaskToList = () => {
   document.querySelector('#add-task').value = '';
 };
 
-const updateIndex = () => {
+export const updateIndex = () => {
   tasks.forEach((task, i) => {
     task.index = i + 1;
   });
