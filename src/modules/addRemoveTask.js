@@ -1,19 +1,19 @@
-import { renderTasks } from "./renderEditTask.js";
-import tasks from "./taskObject.js";
+import { renderTasks } from './renderEditTask.js';
+import tasks from './taskObject.js';
 
-const listContainer = document.getElementById("list-container");
+const listContainer = document.getElementById('list-container');
 
 const addTaskToList = () => {
-  const addTaskValue = document.querySelector("#add-task").value;
+  const addTaskValue = document.querySelector('#add-task').value;
   const newTask = {
     description: addTaskValue,
     completed: false,
     index: tasks.length + 1,
   };
   tasks.push(newTask);
-  localStorage.setItem("Tasks", JSON.stringify(tasks));
+  localStorage.setItem('Tasks', JSON.stringify(tasks));
   renderTasks();
-  document.querySelector("#add-task").value = "";
+  document.querySelector('#add-task').value = '';
 };
 
 export const updateIndex = () => {
@@ -25,15 +25,15 @@ export const updateIndex = () => {
 const removeTaskFromList = (id) => {
   tasks.splice(id, 1);
   updateIndex();
-  localStorage.setItem("Tasks", JSON.stringify(tasks));
+  localStorage.setItem('Tasks', JSON.stringify(tasks));
   renderTasks();
 };
 
 /** ********  Events  ************ */
 
 export const handleRemoveTask = () => {
-  listContainer.addEventListener("click", (event) => {
-    if (event.target.classList.contains("remove-task-btn")) {
+  listContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-task-btn')) {
       const taskId = event.target.parentNode.id;
       removeTaskFromList(taskId);
     }
@@ -41,8 +41,8 @@ export const handleRemoveTask = () => {
 };
 
 export const handleAddTask = () => {
-  const addTaskBtn = document.querySelector(".add-task-btn");
-  addTaskBtn.addEventListener("click", () => {
+  const addTaskBtn = document.querySelector('.add-task-btn');
+  addTaskBtn.addEventListener('click', () => {
     addTaskToList();
   });
 };

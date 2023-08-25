@@ -1,6 +1,6 @@
-import tasks from "./taskObject.js";
+import tasks from './taskObject.js';
 
-const listContainer = document.getElementById("list-container");
+const listContainer = document.getElementById('list-container');
 
 const taskStatusUpdate = (id, checked) => {
   const task = tasks[id];
@@ -9,13 +9,13 @@ const taskStatusUpdate = (id, checked) => {
   } else {
     task.completed = false;
   }
-  localStorage.setItem("Tasks", JSON.stringify(tasks));
+  localStorage.setItem('Tasks', JSON.stringify(tasks));
 };
 
 export const handletaskStatus = () => {
-  listContainer.addEventListener("change", (event) => {
-    let target = event.target;
-    if (target.classList.contains("check-box")) {
+  listContainer.addEventListener('change', (event) => {
+    const { target } = event;
+    if (target.classList.contains('check-box')) {
       taskStatusUpdate(target.parentNode.id, target.checked);
     }
   });
@@ -25,11 +25,11 @@ const taskDefaultStatus = () => {
   tasks.forEach((task) => {
     task.completed = false;
   });
-  localStorage.setItem("Tasks", JSON.stringify(tasks));
+  localStorage.setItem('Tasks', JSON.stringify(tasks));
 };
 
 export const handleTaskDefaultStatus = () => {
-  window.addEventListener("load", () => {
+  window.addEventListener('load', () => {
     taskDefaultStatus();
   });
 };
