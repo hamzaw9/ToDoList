@@ -54,7 +54,7 @@ The "To Do list" app is a powerful organizational tool designed to streamline yo
 ### Key Features <a name="key-features"></a>
 
 - **ES6 Syntax**
-- **DOM Manipulatio**
+- **DOM Manipulation**
 - **Webpack**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
