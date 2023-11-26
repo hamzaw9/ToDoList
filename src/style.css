@@ -4,13 +4,19 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 button {
   cursor: pointer;
 }
 
 .to-do-container {
   width: 35%;
-  margin: 0 auto;
   color: #777272;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
 }
