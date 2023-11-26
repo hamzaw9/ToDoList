@@ -4,15 +4,22 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 button {
   cursor: pointer;
 }
 
 .to-do-container {
-  width: 35%;
-  margin: 0 auto;
+  width: 45%;
   color: #777272;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 15px;
 }
 
 .to-do-inner {
@@ -88,4 +95,16 @@ input:focus {
 .clear-task-btn:hover {
   color: black;
   text-decoration: underline;
+}
+
+@media (width <= 768px) {
+  .to-do-container {
+    width: 75%;
+  }
+}
+
+@media (width <= 600px) {
+  .to-do-container {
+    width: 85%;
+  }
 }
