@@ -97,12 +97,13 @@ input:focus {
   text-decoration: underline;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .to-do-container {
     width: 75%;
   }
 }
-@media (max-width: 600px) {
+
+@media (width <= 600px) {
   .to-do-container {
     width: 85%;
   }
