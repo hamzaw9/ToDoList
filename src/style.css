@@ -16,9 +16,10 @@ button {
 }
 
 .to-do-container {
-  width: 35%;
+  width: 45%;
   color: #777272;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+  border-radius: 15px;
 }
 
 .to-do-inner {
@@ -94,4 +95,15 @@ input:focus {
 .clear-task-btn:hover {
   color: black;
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .to-do-container {
+    width: 75%;
+  }
+}
+@media (max-width: 600px) {
+  .to-do-container {
+    width: 85%;
+  }
 }
