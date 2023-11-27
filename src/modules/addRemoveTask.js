@@ -6,11 +6,17 @@ const listContainer = document.getElementById('list-container');
 
 const addTaskToList = () => {
   const addTaskValue = document.querySelector('#add-task').value;
+
+  if (!addTaskValue.trim()) {
+    return;
+  }
+
   const newTask = {
     description: addTaskValue,
     completed: false,
     index: tasks.length + 1,
   };
+
   tasks.push(newTask);
   updateLocalStorage();
   renderTasks();
