@@ -39,6 +39,23 @@ button {
   border-bottom: 1px solid #dfd6d6;
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-arrows-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.fa-arrows-rotate:hover {
+  animation: none;
+}
+
 .error-msg {
   display: none;
   margin: 0 auto;
@@ -54,6 +71,7 @@ button {
 .list-container-inner {
   padding: 17px;
   border-bottom: 1px solid #dfd6d6;
+  font-weight: 600;
 }
 
 .list-container-inner:first-child {
