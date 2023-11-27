@@ -36,6 +36,18 @@ button {
   border-bottom: 1px solid #dfd6d6;
 }
 
+.error-msg {
+  display: none;
+  margin: 0 auto;
+  width: max-content;
+  font-weight: 600;
+  color: #d8000c;
+  background-color: #ffbaba;
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 10px;
+}
+
 .list-container-inner {
   padding: 17px;
   border-bottom: 1px solid #dfd6d6;

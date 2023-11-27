@@ -3,16 +3,25 @@ import updateLocalStorage from './updateLocalStorage.js';
 import tasks from './taskObject.js';
 
 const listContainer = document.getElementById('list-container');
+const addTaskValue = document.querySelector('#add-task');
+const errorMsg = document.querySelector('.error-msg');
+
+const showErrorMessage = () => {
+  errorMsg.style.display = 'block';
+};
+
+const hideErrorMessage = () => {
+  errorMsg.style.display = 'none';
+};
 
 const addTaskToList = () => {
-  const addTaskValue = document.querySelector('#add-task').value;
-
-  if (!addTaskValue.trim()) {
+  if (!addTaskValue.value.trim()) {
+    showErrorMessage();
     return;
   }
 
   const newTask = {
-    description: addTaskValue,
+    description: addTaskValue.value,
     completed: false,
     index: tasks.length + 1,
   };
@@ -20,8 +29,12 @@ const addTaskToList = () => {
   tasks.push(newTask);
   updateLocalStorage();
   renderTasks();
-  document.querySelector('#add-task').value = '';
+  addTaskValue.value = '';
 };
+
+addTaskValue.addEventListener('focus', hideErrorMessage);
+
+addTaskValue.addEventListener('input', hideErrorMessage);
 
 export const updateIndex = () => {
   tasks.forEach((task, i) => {
