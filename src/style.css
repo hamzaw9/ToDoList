@@ -22,6 +22,7 @@ button {
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
   border-radius: 15px;
   background-color: white;
+  padding: 10px 0;
 }
 
 .to-do-inner {
@@ -99,16 +100,22 @@ input:focus {
 }
 
 .clear-task-btn {
+  display: block;
+  margin: 0 auto;
   padding: 15px;
-  width: 100%;
-  color: #777272;
+  color: #fff;
+  background-color: #ec5242;
   font-size: 14px;
+  font-weight: 700;
   border: none;
+  border-radius: 18px;
+  transition: background-color 1s, color 1s, text-decoration 1s, border 1s;
 }
 
 .clear-task-btn:hover {
-  color: black;
-  text-decoration: underline;
+  color: #ec5242;
+  background-color: #fff;
+  border: 1px solid #ec5242;
 }
 
 @media (width <= 768px) {
